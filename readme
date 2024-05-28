@@ -1,0 +1,81 @@
+Sobre nós Página para serviços de investimento em criptografia
+Este repositório contém o código para a página “Sobre nós” de um site que fornece serviços de investimento em criptografia. A página foi projetada usando ASP.NET MVC e inclui HTML e sintaxe Razor para estrutura e layout.
+
+Índice
+Visão geral
+Estrutura
+Detalhamento do código
+Uso
+Dependências
+Licença
+Visão geral
+A About.cshtmlpágina é uma visualização em um aplicativo ASP.NET MVC que exibe informações sobre os serviços de investimento em criptografia oferecidos pelo site. A página inclui título, texto introdutório, imagem e detalhes adicionais sobre os serviços.
+
+Estrutura
+A página usa a sintaxe Razor para definir o título e o layout, e HTML para o conteúdo principal. A estrutura inclui um alinhamento central para todo o conteúdo, múltiplas seções para espaçamento e um layout específico para a seção “Sobre nós”.
+
+Detalhamento do código
+ViewBag.Título e Layout
+
+csharp
+
+Copiar código
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+ViewBag.Title: Define o título da página como "Sobre".
+Layout: especifica a página de layout a ser usada para esta visualização.
+Centralizando conteúdo
+
+HTML
+
+Copiar código
+<center>
+    <br/>
+    ...
+</center>
+A <center>tag centraliza o conteúdo horizontalmente.
+Várias <br/>tags fornecem espaçamento vertical.
+Sobre a seção
+
+HTML
+
+Copiar código
+<section class="about_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>About <span>Us</span></h2>
+            <p>Crypto Investment Services.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="img-box">
+                    <img src="../Content/images/about-img.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="detail-box">
+                    <h3>We Are Crypto</h3>
+                    <p>Crypto Investment, Long Term Trading Services.</p>
+                    <a href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>: Define a seção "Sobre nós" com uma classe para estilo.
+<div class="container">: Recipiente para armazenar o conteúdo centralmente.
+<div class="heading_container heading_center">: Título alinhado ao centro.
+<h2>e <p>: Título e texto introdutório da seção "Sobre nós".
+<div class="row">: cria uma linha para layout de conteúdo.
+<div class="col-md-6">: Define duas colunas para a imagem e detalhes.
+<div class="img-box">: Contém a imagem da seção sobre.
+<div class="detail-box">: contém os detalhes do texto e um link "Leia mais".
+Uso
+Configuração : certifique-se de que o projeto tenha as imagens e arquivos de layout necessários referenciados no código.
+Personalização : atualize o texto e as imagens de acordo com suas necessidades para a página "Sobre nós".
+Estilo : modifique ou estenda as classes CSS ( about_section, layout_padding, heading_center, etc.) em sua folha de estilo para obter a aparência desejada.
+Dependências
+ASP.NET MVC Framework : esta visualização faz parte de um projeto ASP.NET MVC.
+Bootstrap : utiliza classes Bootstrap para design responsivo ( col-md-6).
